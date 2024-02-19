@@ -1,11 +1,9 @@
-// №1 
+// // №1 
 function getLength(data) {
-  if (typeof(data) === 'number' && !Number.isNaN(data)) {
-    console.log(String(data).length);
-  } else if (typeof(data) === 'string') {
+  if (data && data.length !== undefined) {
     console.log(data.length);
-  } else if (Array.isArray(data)) {
-    console.log(data.length);
+  } else if (data instanceof Map || data instanceof Set) {
+    console.log(data.size);
   } else if (data instanceof Object) {
     console.log(Object.keys(data).length);
   } else {
